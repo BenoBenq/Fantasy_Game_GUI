@@ -17,7 +17,6 @@ public class Wuerfel {
   
   public Wuerfel(int seitenAnzahl) {
     this.seitenAnzahl = seitenAnzahl;
-    this.gewuerfelteSeite = 0;
   }
 
   // Anfang Methoden
@@ -26,6 +25,7 @@ public class Wuerfel {
   }
 
   public int getGewuerfelteSeite() {
+    gewuerfelteSeite = (int) Math.random()*seitenAnzahl;
     return gewuerfelteSeite;
   }
 

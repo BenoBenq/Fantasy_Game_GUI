@@ -1,3 +1,5 @@
+package benobenq.fantasy_game_GUI.monster;
+
 /**
   *
   * Beschreibung

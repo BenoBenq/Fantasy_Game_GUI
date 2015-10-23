@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da6d8195-9876-45e5-a820-239911616743" name="Default" comment="Added files">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Szenarien.odt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/held/Held.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/spielfeld/Kampfleitung.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/held/Krieger.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/monster/Monster.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/waffe/Waffe.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/spielfeld/Wuerfel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/held/Zauberer.java" />
+    <list default="true" id="da6d8195-9876-45e5-a820-239911616743" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/monster/Monster.java" afterPath="$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/monster/Monster.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/spielfeld/Wuerfel.java" afterPath="$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/spielfeld/Wuerfel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Fantasy_Game_GUI.iws" />
@@ -75,17 +69,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Wuerfel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Wuerfel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/spielfeld/Wuerfel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7989865" vertical-offset="139" max-vertical-offset="731">
-              <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+              <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
               <folding>
-                <element signature="e#424#425#0" expanded="true" />
-                <element signature="e#453#454#0" expanded="true" />
-                <element signature="e#491#492#0" expanded="true" />
-                <element signature="e#524#525#0" expanded="true" />
+                <element signature="e#296#297#0" expanded="true" />
+                <element signature="e#338#339#0" expanded="true" />
+                <element signature="e#393#394#0" expanded="true" />
+                <element signature="e#422#423#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Monster.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/monster/Monster.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+              <caret line="0" column="42" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -94,7 +98,7 @@
         <entry file="file://$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/spielfeld/Kampfleitung.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="44" />
+              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -103,7 +107,7 @@
       <file leaf-file-name="Waffe.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/waffe/Waffe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="680">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
               <caret line="0" column="40" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
               <folding />
             </state>
@@ -126,6 +130,7 @@
         <option value="$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/held/Held.java" />
         <option value="$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/held/Krieger.java" />
         <option value="$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/spielfeld/Wuerfel.java" />
+        <option value="$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/monster/Monster.java" />
       </list>
     </option>
   </component>
@@ -529,7 +534,13 @@
       <option name="project" value="LOCAL" />
       <updated>1445626014646</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added files">
+      <created>1445642054720</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1445642054720</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -633,21 +644,29 @@
     <entry file="file://$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/spielfeld/Kampfleitung.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="44" />
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/spielfeld/Wuerfel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7989865" vertical-offset="139" max-vertical-offset="731">
-          <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+          <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
           <folding>
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/benobenq/fantasy_game_GUI/monster/Monster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+          <caret line="0" column="42" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
