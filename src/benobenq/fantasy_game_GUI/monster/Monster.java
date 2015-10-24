@@ -9,20 +9,17 @@ package benobenq.fantasy_game_GUI.monster;
   */
 
 public class Monster {
-  
-  // Anfang Attribute
+
   private int lebenspunkte;
   private int angriffswert;
   private boolean amLeben;
-  // Ende Attribute
   
   public Monster(int pLebenspunkte, int pAngriffswert) {
     lebenspunkte = pLebenspunkte;
     angriffswert = pAngriffswert;
-    amLeben = false;
+    amLeben = true;
   }
 
-  // Anfang Methoden
   public int getLebenspunkte() {
     return lebenspunkte;
   }
@@ -31,9 +28,11 @@ public class Monster {
     return angriffswert;
   }
 
-  public void lebenVerlieren() {
-    
+  public void lebenVerlieren(int value) {
+    if(lebenspunkte-value > 0) {
+      lebenspunkte = lebenspunkte-value;
+    } else {
+      amLeben = false;
+    }
   }
-
-  // Ende Methoden
-} // end of Monster
+}
