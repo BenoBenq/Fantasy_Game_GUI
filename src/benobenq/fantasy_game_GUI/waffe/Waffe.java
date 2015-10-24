@@ -8,12 +8,10 @@ package benobenq.fantasy_game_GUI.waffe;
   */
 
 public class Waffe {
-  
-  // Anfang Attribute
+
   private int schadensbonus;
   private int materialWert;
   private int magie;
-  // Ende Attribute
   
   public Waffe(int pSchadensbonus, int pMaterialWert, int pMagie) {
     schadensbonus = pSchadensbonus;
@@ -37,6 +35,4 @@ public class Waffe {
   public int bonusBerechnen() {
     return schadensbonus*(magie+materialWert);
   }
-
-  // Ende Methoden
-} // end of Waffe
+}

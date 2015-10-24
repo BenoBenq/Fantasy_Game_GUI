@@ -1,5 +1,9 @@
 package benobenq.fantasy_game_GUI.spielfeld;
 
+import benobenq.fantasy_game_GUI.held.Krieger;
+import benobenq.fantasy_game_GUI.monster.Monster;
+import benobenq.fantasy_game_GUI.waffe.Waffe;
+
 /**
   *
   * Beschreibung
@@ -9,11 +13,10 @@ package benobenq.fantasy_game_GUI.spielfeld;
   */
 
 public class Kampfleitung {
-  
-  // Anfang Attribute
-  // Ende Attribute
+
   
   public Kampfleitung() {
+    mkPeople();
   }
 
   // Anfang Methoden
@@ -21,5 +24,9 @@ public class Kampfleitung {
     
   }
 
-  // Ende Methoden
-} // end of Kampfleitung
+  public void mkPeople() {
+    Monster monster = new Monster(100, 11);
+    Waffe mWaffe = new Waffe(12, 3, 1);
+    Krieger krieger = new Krieger(mWaffe, "Otto", 134, 34, 3);
+  }
+}
