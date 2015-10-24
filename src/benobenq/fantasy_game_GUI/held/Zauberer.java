@@ -11,17 +11,14 @@ import benobenq.fantasy_game_GUI.waffe.Waffe;
   */
 
 public class Zauberer extends Held {
-  
-  // Anfang Attribute
+
   private int heilkraft;
-  // Ende Attribute
   
   public Zauberer(Waffe pWaffe, String pName, int pLebenspunkte, boolean pAmLeben, int pHeilkraft) {
-    super(pWaffe, pName, pLebenspunkte, pAmLeben);
+    super(pWaffe, pName, pLebenspunkte);
     heilkraft = pHeilkraft;
   }
-  
-  // Anfang Methoden
+
   public int getHeilkraft() {
     return heilkraft;
   }
@@ -29,6 +26,4 @@ public class Zauberer extends Held {
   public void berechneAngriffswert(int wuerfel) {
     angriffswert = wuerfel+waffe.getSchadensbonus();
   }
-  
-  // Ende Methoden
-} // end of Zauberer
+}
