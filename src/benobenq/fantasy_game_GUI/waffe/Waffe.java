@@ -35,7 +35,7 @@ public class Waffe {
   }
 
   public int bonusBerechnen() {
-    return 0;
+    return schadensbonus*(magie+materialWert);
   }
 
   // Ende Methoden
