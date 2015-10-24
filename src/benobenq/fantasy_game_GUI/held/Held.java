@@ -11,33 +11,18 @@ import benobenq.fantasy_game_GUI.waffe.Waffe;
   */
 
 public class Held {
-  
-  // Anfang Attribute
+
   protected String name;
   protected int lebenspunkte;
   protected int angriffswert;
   protected boolean amLeben;
   protected Waffe waffe;
-  // Ende Attribute
   
   public Held(Waffe pWaffe, String pName, int pLebenspunkte) {
     waffe = pWaffe;
     name = pName;
     lebenspunkte = pLebenspunkte;
     amLeben = true;
-  }
-
-  // Anfang Methoden
-  public String getName() {
-    return name;
-  }
-
-  public int getLebenspunkte() {
-    return lebenspunkte;
-  }
-
-  public int getAngriffswert() {
-    return angriffswert;
   }
 
   public void waffeAufheben(Waffe pWaffe) {
@@ -63,6 +48,13 @@ public class Held {
   public boolean istAmLeben() {
     return amLeben;
   }
-
-  // Ende Methoden
-} // end of Held
+  public int getAngriffswert() {
+    return angriffswert;
+  }
+  public int getLebenspunkte() {
+    return lebenspunkte;
+  }
+  public String getName() {
+    return name;
+  }
+}
