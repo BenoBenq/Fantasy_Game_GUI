@@ -15,18 +15,16 @@ public class Held {
   // Anfang Attribute
   protected String name;
   protected int lebenspunkte;
-  protected int staerke;
   protected int angriffswert;
   protected boolean amLeben;
   protected Waffe waffe;
   // Ende Attribute
   
-  public Held(Waffe pWaffe, String pName, int pLebenspunkte, int pStaerke, boolean pAmLeben) {
+  public Held(Waffe pWaffe, String pName, int pLebenspunkte) {
     waffe = pWaffe;
     name = pName;
     lebenspunkte = pLebenspunkte;
-    staerke = pStaerke;
-    amLeben = pAmLeben;
+    amLeben = true;
   }
 
   // Anfang Methoden
@@ -38,29 +36,32 @@ public class Held {
     return lebenspunkte;
   }
 
-  public int getStaerke() {
-    return staerke;
-  }
-
   public int getAngriffswert() {
     return angriffswert;
   }
 
   public void waffeAufheben(Waffe pWaffe) {
-    
+    waffe = pWaffe;
   }
 
-  public void berechneAW() {
+  public void berechneAngriffswert(int wuerfel) {
+    angriffswert = wuerfel+waffe.getSchadensbonus();
   }
 
   public void angreifen() {
+
   }
 
-  public void lebenVerlieren() {
+  public void lebenVerlieren(int value) {
+    if(lebenspunkte-value > 0) {
+      lebenspunkte = lebenspunkte-value;
+    } else {
+      amLeben = false;
+    }
   }
 
   public boolean istAmLeben() {
-    return false;
+    return amLeben;
   }
 
   // Ende Methoden
