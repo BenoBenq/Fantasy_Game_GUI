@@ -14,11 +14,13 @@ public class Krieger extends Held {
   
   // Anfang Attribute
   private int ausdauer;
+  private int staerke;
   // Ende Attribute
   
-  public Krieger(Waffe pWaffe, String pName, int pLebenspunkte, int pStaerke, boolean pAmLeben, int pAusdauer) {
-    super(pWaffe, pName, pLebenspunkte, pStaerke, pAmLeben);
-    ausdauer = pAusdauer;                                                           
+  public Krieger(Waffe pWaffe, String pName, int pLebenspunkte, boolean pAmLeben, int pAusdauer, int staerke) {
+    super(pWaffe, pName, pLebenspunkte, pAmLeben);
+    ausdauer = pAusdauer;
+    this.staerke = staerke;
   }
   
   
@@ -27,8 +29,12 @@ public class Krieger extends Held {
     return ausdauer;
   }
   
-  public void berechneAngriffswert() {
-    
+  public void berechneAngriffswert(int wuerfel) {
+    angriffswert = wuerfel+waffe.getSchadensbonus()+staerke+ausdauer;
+  }
+
+  public int getStaerke() {
+    return staerke;
   }
   
   // Ende Methoden
