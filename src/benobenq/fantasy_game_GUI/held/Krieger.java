@@ -11,20 +11,16 @@ import benobenq.fantasy_game_GUI.waffe.Waffe;
   */
 
 public class Krieger extends Held {
-  
-  // Anfang Attribute
+
   private int ausdauer;
   private int staerke;
-  // Ende Attribute
   
-  public Krieger(Waffe pWaffe, String pName, int pLebenspunkte, boolean pAmLeben, int pAusdauer, int staerke) {
-    super(pWaffe, pName, pLebenspunkte, pAmLeben);
+  public Krieger(Waffe pWaffe, String pName, int pLebenspunkte, int pAusdauer, int staerke) {
+    super(pWaffe, pName, pLebenspunkte);
     ausdauer = pAusdauer;
     this.staerke = staerke;
   }
-  
-  
-  // Anfang Methoden
+
   public int getAusdauer() {
     return ausdauer;
   }
@@ -36,6 +32,5 @@ public class Krieger extends Held {
   public int getStaerke() {
     return staerke;
   }
-  
-  // Ende Methoden
-} // end of Krieger
+
+}
