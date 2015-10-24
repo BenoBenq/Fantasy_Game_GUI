@@ -16,8 +16,8 @@ public class Zauberer extends Held {
   private int heilkraft;
   // Ende Attribute
   
-  public Zauberer(Waffe pWaffe, String pName, int pLebenspunkte, int pStaerke, boolean pAmLeben, int pHeilkraft) {
-    super(pWaffe, pName, pLebenspunkte, pStaerke, pAmLeben);
+  public Zauberer(Waffe pWaffe, String pName, int pLebenspunkte, boolean pAmLeben, int pHeilkraft) {
+    super(pWaffe, pName, pLebenspunkte, pAmLeben);
     heilkraft = pHeilkraft;
   }
   
@@ -26,8 +26,8 @@ public class Zauberer extends Held {
     return heilkraft;
   }
   
-  public void berechneAngriffswert() {
-    
+  public void berechneAngriffswert(int wuerfel) {
+    angriffswert = wuerfel+waffe.getSchadensbonus();
   }
   
   // Ende Methoden
