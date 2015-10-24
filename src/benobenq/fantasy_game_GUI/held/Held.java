@@ -33,9 +33,9 @@ public class Held {
     angriffswert = wuerfel+waffe.getSchadensbonus();
   }
 
-  public void angreifen() {
+  /*public void angreifen() {
 
-  }
+  }*/
 
   public void lebenVerlieren(int value) {
     if(lebenspunkte-value > 0) {
