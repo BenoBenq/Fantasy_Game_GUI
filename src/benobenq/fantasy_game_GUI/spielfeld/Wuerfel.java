@@ -9,11 +9,9 @@ package benobenq.fantasy_game_GUI.spielfeld;
   */
 
 public class Wuerfel {
-  
-  // Anfang Attribute
+
   protected int seitenAnzahl;
   protected int gewuerfelteSeite;
-  // Ende Attribute
   
   public Wuerfel(int seitenAnzahl) {
     this.seitenAnzahl = seitenAnzahl;
@@ -32,4 +30,4 @@ public class Wuerfel {
     random++;
     gewuerfelteSeite = (int) random;
   }
-} // end of Wuerfel
+}
