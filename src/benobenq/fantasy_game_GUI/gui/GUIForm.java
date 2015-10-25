@@ -1,10 +1,6 @@
 package benobenq.fantasy_game_GUI.gui;
 
 import javax.swing.*;
-import javax.swing.table.JTableHeader;
-import javax.swing.table.TableColumn;
-import javax.swing.text.JTextComponent;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -15,7 +11,9 @@ public class GUIForm extends JFrame {
 
     private JButton clickMEButton;
     private JPanel RootPanel;
-    private JTable Gamefield;
+    private JButton erschaffenButton;
+    private JButton erschaffenButton1;
+    private JFrame f = this;
 
     public GUIForm() {
         super("Ich");
@@ -23,12 +21,22 @@ public class GUIForm extends JFrame {
         pack();
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
-
-        clickMEButton.addActionListener(new ActionListener() {
+        erschaffenButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("You clicked me");
-
+                JDialog d = new JDialog(f);
+                d.setTitle("Erschaffe Held");
+                d.setSize(200, 200);
+                d.setVisible(true);
+            }
+        });
+        erschaffenButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JDialog d = new JDialog(f);
+                d.setTitle("Erschaffe Monster");
+                d.setSize(200, 200);
+                d.setVisible(true);
             }
         });
     }
