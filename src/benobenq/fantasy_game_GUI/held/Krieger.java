@@ -15,8 +15,8 @@ public class Krieger extends Held {
   private int ausdauer;
   private int staerke;
   
-  public Krieger(Waffe pWaffe, String pName, int pLebenspunkte, int pAusdauer, int staerke) {
-    super(pWaffe, pName, pLebenspunkte);
+  public Krieger(String pName, int pLebenspunkte, int pAusdauer, int staerke) {
+    super(pName, pLebenspunkte);
     ausdauer = pAusdauer;
     this.staerke = staerke;
   }

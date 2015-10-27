@@ -14,8 +14,8 @@ public class Zauberer extends Held {
 
   private int heilkraft;
   
-  public Zauberer(Waffe pWaffe, String pName, int pLebenspunkte, boolean pAmLeben, int pHeilkraft) {
-    super(pWaffe, pName, pLebenspunkte);
+  public Zauberer(String pName, int pLebenspunkte, int pHeilkraft) {
+    super(pName, pLebenspunkte);
     heilkraft = pHeilkraft;
   }
 

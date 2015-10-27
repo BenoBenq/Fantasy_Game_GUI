@@ -18,8 +18,8 @@ public class Held {
   protected boolean amLeben;
   protected Waffe waffe;
   
-  public Held(Waffe pWaffe, String pName, int pLebenspunkte) {
-    waffe = pWaffe;
+  public Held(String pName, int pLebenspunkte) {
+    waffe = null;
     name = pName;
     lebenspunkte = pLebenspunkte;
     amLeben = true;
