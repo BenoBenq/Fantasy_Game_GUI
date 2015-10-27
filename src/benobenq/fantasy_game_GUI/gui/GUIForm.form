@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="benobenq.fantasy_game_GUI.gui.GUIForm">
-  <grid id="27dc6" binding="RootPanel" layout-manager="GridLayoutManager" row-count="7" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="RootPanel" layout-manager="GridLayoutManager" row-count="7" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="30" left="30" bottom="30" right="30"/>
     <constraints>
       <xy x="20" y="20" width="500" height="400"/>
@@ -17,7 +17,7 @@
       </vspacer>
       <hspacer id="63eef">
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="1" row-span="1" col-span="3" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
       </hspacer>
       <component id="82271" class="javax.swing.JLabel">
@@ -40,19 +40,9 @@
           <text value="Monster"/>
         </properties>
       </component>
-      <component id="140db" class="javax.swing.JButton" binding="erschaffenButton1" default-binding="true">
-        <constraints>
-          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="85" height="49"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value="Erschaffen"/>
-        </properties>
-      </component>
       <component id="339a5" class="javax.swing.JLabel">
         <constraints>
-          <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Spielfeld"/>
@@ -61,7 +51,17 @@
       <component id="4e60e" class="javax.swing.JButton" binding="erschaffenButton" default-binding="true">
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="85" height="72"/>
+            <preferred-size width="85" height="49"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Erschaffen"/>
+        </properties>
+      </component>
+      <component id="140db" class="javax.swing.JButton" binding="erschaffenButton1" default-binding="true">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="85" height="49"/>
           </grid>
         </constraints>
         <properties>
