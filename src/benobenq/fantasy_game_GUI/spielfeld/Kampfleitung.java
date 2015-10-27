@@ -27,6 +27,6 @@ public class Kampfleitung {
   public void mkPeople() {
     Monster monster = new Monster(100, 11);
     Waffe mWaffe = new Waffe(12, 3, 1);
-    Krieger krieger = new Krieger(mWaffe, "Otto", 134, 34, 3);
+    Krieger krieger = new Krieger("Otto", 134, 34, 3);
   }
 }
