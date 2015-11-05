@@ -21,6 +21,10 @@ public class Erschaffe extends JDialog {
     private JTextField staerkeTF;
     private JTextField ausdauerTF;
     private JTextField heilkraftTF;
+    private JLabel output;
+    private JLabel jStaerke;
+    private JLabel jAusdauer;
+    private JLabel jHeilkraft;
 
     private String name;
     private int lp;
@@ -35,24 +39,6 @@ public class Erschaffe extends JDialog {
 
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                name = nameTF.getText();
-                lp = Integer.parseInt(lpTF.getText());
-                staerke = Integer.parseInt(staerkeTF.getText());
-                ausdauer = Integer.parseInt(ausdauerTF.getText());
-                heilkraft = Integer.parseInt(heilkraftTF.getText());
-                if(!heldCheckBox.isSelected()) {
-                    if(kriegerRadioButton.isSelected()) {
-                        Krieger k = new Krieger(name, lp, ausdauer, staerke);
-                        System.out.println("Krieger");
-                    } else {
-                        Zauberer z = new Zauberer(name, lp,heilkraft);
-                        System.out.println("Zauberer");
-                    }
-                } else {
-                    Held h = new Held(name, lp);
-                    System.out.println("Held");
-                }
-
                 onOK();
             }
         });
@@ -81,8 +67,8 @@ public class Erschaffe extends JDialog {
             @Override
             public void keyPressed(KeyEvent e) {
                 if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-                    String text = nameTF.getText();
-                    name = text;
+                    //String text = nameTF.getText();
+                    //name = text;
                     //dispose();
                 }
             }
@@ -99,6 +85,10 @@ public class Erschaffe extends JDialog {
                     ausdauerTF.setEnabled(false);
                     staerkeTF.setEnabled(false);
                     heilkraftTF.setEnabled(false);
+                    jAusdauer.setEnabled(false);
+                    jStaerke.setEnabled(false);
+                    jHeilkraft.setEnabled(false);
+                    output.setText("Name und LP");
                 }
             }
         });
@@ -108,9 +98,14 @@ public class Erschaffe extends JDialog {
                 if(kriegerRadioButton.isSelected()) {
                     ausdauerTF.setEnabled(true);
                     staerkeTF.setEnabled(true);
+                    jAusdauer.setEnabled(true);
+                    jStaerke.setEnabled(true);
+                    output.setText("Ausdauer und Stärke zusätzlich!");
                 } else {
                     ausdauerTF.setEnabled(false);
                     staerkeTF.setEnabled(false);
+                    jAusdauer.setEnabled(false);
+                    jStaerke.setEnabled(false);
                 }
             }
         });
@@ -119,8 +114,11 @@ public class Erschaffe extends JDialog {
             public void stateChanged(ChangeEvent e) {
                 if(magierRadioButton.isSelected()) {
                     heilkraftTF.setEnabled(true);
+                    jHeilkraft.setEnabled(true);
+                    output.setText("Heilkraft zusätzlich!");
                 } else {
                     heilkraftTF.setEnabled(false);
+                    jHeilkraft.setEnabled(false);
                 }
             }
         });
@@ -128,7 +126,27 @@ public class Erschaffe extends JDialog {
 
 
     private void onOK() {
-// add your code here
+        if(!heldCheckBox.isSelected()) {
+            if(kriegerRadioButton.isSelected()) {
+                name = nameTF.getText();
+                lp = Integer.parseInt(lpTF.getText());
+                staerke = Integer.parseInt(staerkeTF.getText());
+                ausdauer = Integer.parseInt(ausdauerTF.getText());
+                Krieger k = new Krieger(name, lp, ausdauer, staerke);
+                System.out.println("Krieger");
+            } else {
+                name = nameTF.getText();
+                lp = Integer.parseInt(lpTF.getText());
+                heilkraft = Integer.parseInt(heilkraftTF.getText());
+                Zauberer z = new Zauberer(name, lp,heilkraft);
+                System.out.println("Zauberer");
+            }
+        } else {
+            name = nameTF.getText();
+            lp = Integer.parseInt(lpTF.getText());
+            Held h = new Held(name, lp);
+            System.out.println("Held");
+        }
         dispose();
     }
 
@@ -141,6 +159,6 @@ public class Erschaffe extends JDialog {
         Erschaffe dialog = new Erschaffe();
         dialog.pack();
         dialog.setVisible(true);
-        System.exit(0);
+        //System.exit(0);
     }
 }
