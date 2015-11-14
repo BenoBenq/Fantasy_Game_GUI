@@ -13,10 +13,12 @@ public class Monster {
   private int lebenspunkte;
   private int angriffswert;
   private boolean amLeben;
+  private String name;
   
-  public Monster(int pLebenspunkte, int pAngriffswert) {
+  public Monster(int pLebenspunkte, int pAngriffswert, String name) {
     lebenspunkte = pLebenspunkte;
     angriffswert = pAngriffswert;
+    this.name = name;
     amLeben = true;
   }
 
@@ -24,15 +26,20 @@ public class Monster {
     return lebenspunkte;
   }
 
-  public int getAngriffswert() {
-    return angriffswert;
+  public int getAngriffswert(int wuerfelhoehe) {
+    return angriffswert+wuerfelhoehe;
   }
 
   public void lebenVerlieren(int value) {
     if(lebenspunkte-value > 0) {
       lebenspunkte = lebenspunkte-value;
     } else {
+      lebenspunkte = 0;
       amLeben = false;
     }
+  }
+  public boolean isAlive() {return amLeben;}
+  public String toString() {
+    return name;
   }
 }
