@@ -23,7 +23,8 @@ public class Zauberer extends Held {
     return heilkraft;
   }
   
-  public void berechneAngriffswert(int wuerfel) {
+  public int berechneAngriffswert(int wuerfel) {
     angriffswert = wuerfel+waffe.getSchadensbonus();
+    return angriffswert;
   }
 }

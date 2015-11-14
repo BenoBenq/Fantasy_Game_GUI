@@ -25,8 +25,9 @@ public class Krieger extends Held {
     return ausdauer;
   }
   
-  public void berechneAngriffswert(int wuerfel) {
+  public int berechneAngriffswert(int wuerfel) {
     angriffswert = wuerfel+waffe.getSchadensbonus()+staerke+ausdauer;
+    return angriffswert;
   }
 
   public int getStaerke() {

@@ -29,8 +29,9 @@ public class Held {
     waffe = pWaffe;
   }
 
-  public void berechneAngriffswert(int wuerfel) {
+  public int berechneAngriffswert(int wuerfel) {
     angriffswert = wuerfel+waffe.getSchadensbonus();
+    return angriffswert;
   }
 
   /*public void angreifen() {
@@ -41,15 +42,13 @@ public class Held {
     if(lebenspunkte-value > 0) {
       lebenspunkte = lebenspunkte-value;
     } else {
+      lebenspunkte = 0;
       amLeben = false;
     }
   }
 
-  public boolean istAmLeben() {
+  public boolean isAlive() {
     return amLeben;
-  }
-  public int getAngriffswert() {
-    return angriffswert;
   }
   public int getLebenspunkte() {
     return lebenspunkte;
@@ -57,4 +56,8 @@ public class Held {
   public String getName() {
     return name;
   }
+  public String toString() {
+    return name;
+  }
+  public Waffe getWaffe() {return waffe;}
 }
