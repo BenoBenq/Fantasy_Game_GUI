@@ -1,4 +1,7 @@
 package benobenq.fantasy_game_GUI.waffe;
+
+import benobenq.fantasy_game_GUI.myEnum.Material;
+
 /**
   *
   * Beschreibung
@@ -10,13 +13,15 @@ package benobenq.fantasy_game_GUI.waffe;
 public class Waffe {
 
   private int schadensbonus;
-  private int materialWert;
+  private Material materialWert;
   private int magie;
+  private String name;
   
-  public Waffe(int pSchadensbonus, int pMaterialWert, int pMagie) {
-    schadensbonus = pSchadensbonus;
+  public Waffe(/*int pSchadensbonus*/ Material pMaterialWert, int pMagie, String name) {
+    //schadensbonus = pSchadensbonus;
     materialWert = pMaterialWert;
     magie = pMagie;
+    this.name = name;
   }
 
   // Anfang Methoden
@@ -24,7 +29,7 @@ public class Waffe {
     return schadensbonus;
   }
 
-  public int getMaterialWert() {
+  public Material getMaterialWert() {
     return materialWert;
   }
 
@@ -33,6 +38,10 @@ public class Waffe {
   }
 
   public int bonusBerechnen() {
-    return schadensbonus*(magie+materialWert);
+    return schadensbonus*(magie+materialWert.getInt());
+  }
+
+  public String toString() {
+    return name;
   }
 }
