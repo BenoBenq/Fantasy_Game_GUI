@@ -15,10 +15,13 @@ import java.awt.event.ActionListener;
  * Created by Bent on 11.11.2015.
  */
 public class Stats extends JFrame{
+    private JPanel RootPanel;
     private JPanel heldenStats;
     private JPanel monsterStats;
+    private JPanel waffenStats;
     private JComboBox heldenList;
     private JComboBox monsterList;
+    private JComboBox waffenList;
     private JLabel nameM;
     private JLabel lpM;
     private JLabel awM;
@@ -27,10 +30,7 @@ public class Stats extends JFrame{
     private JLabel staerkeH;
     private JLabel ausdauerH;
     private JLabel heilkraftH;
-    private JPanel RootPanel;
     private JLabel typeH;
-    private JComboBox waffenList;
-    private JPanel waffenStats;
     private JLabel nameW;
     private JLabel materialW;
     private JLabel magieW;
@@ -38,7 +38,6 @@ public class Stats extends JFrame{
 
     public Stats() {
         setContentPane(RootPanel);
-        pack();
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setVisible(true);
         heldenList.addActionListener(new ActionListener() {
@@ -107,14 +106,14 @@ public class Stats extends JFrame{
                 magieW.setText(i.toString());
             }
         });
-
+        pack();
     }
 
     public void updateObject() {
-        System.out.println("OK");
         heldenList.setSelectedItem(heldenList.getSelectedItem());
         monsterList.setSelectedItem(monsterList.getSelectedItem());
         waffenList.setSelectedItem(waffenList.getSelectedItem());
+        pack();
     }
 
     public JComboBox getHeldenList() {

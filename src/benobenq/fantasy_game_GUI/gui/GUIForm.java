@@ -27,6 +27,7 @@ public class GUIForm extends JFrame {
     private JButton waffeErschaffenButton;
     private JButton kämpfenButton;
     private JButton aufhebenButton;
+    private JButton statsButton;
     private JFrame f = this;
 
     public Kampfleitung kL;
@@ -34,11 +35,16 @@ public class GUIForm extends JFrame {
     Stats stats = new Stats();
 
     public GUIForm(Kampfleitung pKL) {
-        super("Spiel");
+        super("Fantasy-Game");
         kL = pKL;
         setContentPane(RootPanel);
         pack();
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        try {
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         setVisible(true);
         test();
         heldErschaffenButton.addActionListener(new ActionListener() {
@@ -71,7 +77,7 @@ public class GUIForm extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 kL.kaempfenLassen(heldenList.getSelectedItem(), monsterList.getSelectedItem());
-                sync();
+                stats.updateObject();
             }
         });
         aufhebenButton.addActionListener(new ActionListener() {
@@ -80,6 +86,13 @@ public class GUIForm extends JFrame {
                 Held held = (Held) heldenList.getSelectedItem();
                 Waffe waffe = (Waffe) waffenList.getSelectedItem();
                 held.waffeAufheben(waffe);
+            }
+        });
+        statsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                stats = new Stats();
+                sync();
             }
         });
     }
@@ -100,28 +113,27 @@ public class GUIForm extends JFrame {
     }
 
     public void sync() {
-        //heldenList.insertItemAt(kL.getKh(), heldenList.getSelectedIndex());
-        /*for(int i = 0; i <heldenList.getItemCount(); i++) {
-            stats.getHeldenList().insertItemAt(heldenList.getItemAt(i), i);
+        for(int i = 0; i<heldenList.getItemCount();i++) {
+            stats.getHeldenList().addItem(heldenList.getItemAt(i));
         }
-        //monsterList.insertItemAt(kL.getKm(), monsterList.getSelectedIndex());
-        for(int i = 0; i <monsterList.getItemCount(); i++) {
-            stats.getMonsterList().insertItemAt(monsterList.getItemAt(i), i);
-        }*/
-
-        //waffenList.insertItemAt();
-        stats.pack();
+        for(int i = 0; i<monsterList.getItemCount();i++) {
+            stats.getMonsterList().addItem(monsterList.getItemAt(i));
+        }
+        for(int i = 0; i<waffenList.getItemCount();i++) {
+            stats.getWaffenList().addItem(waffenList.getItemAt(i));
+        }
         stats.updateObject();
+        stats.pack();
     }
 
     public void test() {
-        //stats.getHeldenList().addItem(new Krieger("Ich", 13, 30, 40));
         Krieger h = new Krieger("Du", 100, 10, 23);
         addItemsToCmbBx(h);
         Monster m = new Monster(100, 50, "Ich");
         addItemsToCmbBx(m);
         Waffe w = new Waffe(Material.HOLZ, 12, "Honig");
         addItemsToCmbBx(w);
+        stats.updateObject();
         stats.pack();
     }
 }
