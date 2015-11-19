@@ -33,6 +33,7 @@ public class GUIForm extends JFrame {
     public Kampfleitung kL;
     public GUIForm gui = this;
     Stats stats = new Stats();
+    Console cmd = new Console();
 
     public GUIForm(Kampfleitung pKL) {
         super("Fantasy-Game");
@@ -46,12 +47,14 @@ public class GUIForm extends JFrame {
             e.printStackTrace();
         }
         setVisible(true);
+
         test();
         heldErschaffenButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Erschaffe dialog = new Erschaffe("held", gui);
                 addItemsToCmbBx(dialog.getObject());
+                heldenList.setSelectedItem(dialog.getObject());
                 //dialog.setOwner(gui);
                 //heldenList.addItem(dialog.getObject());
 
@@ -63,6 +66,7 @@ public class GUIForm extends JFrame {
                 //Erschaffe.main();
                 Erschaffe dialog = new Erschaffe("monster", gui);
                 addItemsToCmbBx(dialog.getObject());
+                monsterList.setSelectedItem(dialog.getObject());
                 //dialog.setOwner(gui);
             }
         });
@@ -71,6 +75,7 @@ public class GUIForm extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Erschaffe dialog = new Erschaffe("waffe", gui);
                 addItemsToCmbBx(dialog.getObject());
+                waffenList.setSelectedItem(dialog.getObject());
             }
         });
         kämpfenButton.addActionListener(new ActionListener() {
