@@ -31,19 +31,38 @@ public class Kampfleitung {
 
   // Anfang Methoden
   public void kaempfenLassen(Object pHeld, Object pMonster) {
+    int h = 0;
+    int hA = 0;
     kh = (Held) pHeld;
     km = (Monster) pMonster;
     Wuerfel wH = new Wuerfel(6);
     Wuerfel wM = new Wuerfel(10);
     while(kh.isAlive() && km.isAlive()) {
-      wH.wuerfeln();
-      int hA = kh.berechneAngriffswert(wH.getGewuerfelteSeite());
+      if(!(kh instanceof Krieger)) {
+        wH.wuerfeln();
+        hA = kh.berechneAngriffswert(wH.getGewuerfelteSeite());
+      } else {
+        wH.wuerfeln();
+        int staerke = 0;
+        if(((Krieger) kh).getAusdauer() > 0) {
+          staerke = ((Krieger) kh).getStaerke();
+          ((Krieger) kh).setAusdauer(((Krieger) kh).getAusdauer()-1);
+        }
+        hA = kh.berechneAngriffswert(wH.getGewuerfelteSeite()+staerke);
+      }
       wM.wuerfeln();
       int mA = km.getAngriffswert(wM.getGewuerfelteSeite());
       km.lebenVerlieren(hA);
       kh.lebenVerlieren(mA);
       System.out.println("Held: " + kh.getLebenspunkte());
       System.out.println("Monster: " + km.getLebenspunkte());
+      if(h==3) {
+        if(kh instanceof Zauberer) {
+          ((Zauberer) kh).heile();
+          h=0;
+        }
+      }
+      h++;
     }
     if(kh.isAlive()) {
       System.out.println("Der Held hat gewonnen");
