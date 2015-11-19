@@ -27,4 +27,14 @@ public class Zauberer extends Held {
     angriffswert = wuerfel+waffe.getSchadensbonus();
     return angriffswert;
   }
+
+  public void heile() {
+    if(heilkraft+lebenspunkte >= maxHealth) {
+      lebenspunkte = maxHealth;
+      amLeben = true;
+    } else {
+      lebenspunkte = lebenspunkte+heilkraft;
+      amLeben = true;
+    }
+  }
 }

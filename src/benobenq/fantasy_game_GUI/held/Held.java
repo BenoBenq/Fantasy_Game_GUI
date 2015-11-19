@@ -17,11 +17,13 @@ public class Held {
   protected int angriffswert;
   protected boolean amLeben;
   protected Waffe waffe;
+  protected int maxHealth;
   
-  public Held(String pName, int pLebenspunkte) {
+  public Held(String pName, int maxHealth) {
     waffe = null;
     name = pName;
-    lebenspunkte = pLebenspunkte;
+    lebenspunkte = maxHealth;
+    this.maxHealth = maxHealth;
     amLeben = true;
   }
 

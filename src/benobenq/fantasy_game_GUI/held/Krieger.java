@@ -13,25 +13,28 @@ import benobenq.fantasy_game_GUI.waffe.Waffe;
 public class Krieger extends Held {
 
   private int ausdauer;
+  private int maxAusdauer;
   private int staerke;
   
   public Krieger(String pName, int pLebenspunkte, int pAusdauer, int staerke) {
     super(pName, pLebenspunkte);
     ausdauer = pAusdauer;
     this.staerke = staerke;
+    maxAusdauer = pAusdauer;
   }
 
   public int getAusdauer() {
     return ausdauer;
   }
-  
-  public int berechneAngriffswert(int wuerfel) {
-    angriffswert = wuerfel+waffe.getSchadensbonus()+staerke+ausdauer;
-    return angriffswert;
-  }
 
   public int getStaerke() {
     return staerke;
   }
+
+  public int getMaxAusdauer() { return maxAusdauer; }
+
+  public void setAusdauer(int value) {
+     ausdauer = value;
+   }
 
 }
