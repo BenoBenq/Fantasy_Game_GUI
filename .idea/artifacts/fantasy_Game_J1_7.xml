@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="fantasy-Game_J1.7">
+    <output-path>$PROJECT_DIR$/out/artifacts/fantasy_Game_J1_7</output-path>
+    <root id="archive" name="fantasy-Game_J1.7.jar">
+      <element id="module-output" name="Fantasy_Game_GUI" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
