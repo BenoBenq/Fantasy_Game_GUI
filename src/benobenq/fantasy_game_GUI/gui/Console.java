@@ -32,8 +32,8 @@ public class Console extends JFrame{
             public void keyPressed(KeyEvent e) {
                 if(e.getKeyChar() == KeyEvent.VK_ENTER) {
                     String input = consoleInputTextArea.getText();
-                        String[] inputBuffer = input.split(">");
-                        speak(inputBuffer[1]);
+                    String[] inputBuffer = input.split(">");
+                    speak(inputBuffer[1]);
                     consoleInputTextArea.setText(">");
 
                 }
